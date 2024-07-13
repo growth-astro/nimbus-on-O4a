@@ -12,6 +12,15 @@ The following kilonova events were analyzed using nimbus:
 | S231113bw | 0.96 | 0.11 |
 
 ## Important files needed for nimbus
-The nimbus software requires a prior_samples.txt and ZTF_fields.pkl file commonly over any event analyzed.
-The prior_samples.txt file can be found in this repository. They are generated using numpy.random.uniform() function. It is a file where each column is a pair of (magnitude $M$, evolution rate $\alpha$). In this case, 2000 prior values were used for each event analysis.
-The ZTF_fields.pkl file gives information about the ipix value for each field, the $E(B-V)$, and the extinction values for ZTF filter: g, r, and i.
+The `nimbus` software requires a `prior_samples.txt` and `ZTF_fields.pkl` file commonly over any event analyzed.
+
+The `prior_samples.txt` file can be found in this repository. They are generated using `numpy.random.uniform()` function. It is a file where each column is a pair of `(magnitude $M$, evolution rate $\alpha$)`. In this case, $2000$ prior values were used for each event analysis. 
+
+The `ZTF_fields.pkl` file gives information about the `ipix value` for each field, the $E(B-V)$, and the extinction values for `ZTF filter`: `g`, `r`, and `i`.
+
+Other than common files, nimbus requires the following files to calculate the likelihood of the data. These files can be found in the individual directories for each event.
+
+| File | Description |
+| ------------- | ------------- |
+| `skymap file` | A file in `fits.gz` format that contains the 3-dimensional Gravitational Waves skymap localization information.|
+| `data file` | A file in `csv` or `txt` format containing information on the observations in a nimbus-readable format.|
