@@ -24,3 +24,11 @@ Other than common files, nimbus requires the following files to calculate the li
 | ------------- | ------------- |
 | `skymap file` | A file in `fits.gz` format that contains the 3-dimensional Gravitational Waves skymap localization information.|
 | `data file` | A file in `csv` or `txt` format containing information on the observations in a nimbus-readable format.|
+
+## Extra files generated for smoothness
+Some optional files that were generated during the analysis were added to this repository as required.
+
+| File | Description |
+| ------------- | ------------- |
+| `fields file` | A file in `txt` format that contains the field number of unique observations for an individual event.|
+| `status file` | A file in `txt` format containing information on the status of each likelihood calculation job.|
