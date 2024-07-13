@@ -32,3 +32,4 @@ Some optional files that were generated during the analysis were added to this r
 | ------------- | ------------- |
 | `fields file` | A file in `txt` format that contains the field number of unique observations for an individual event.|
 | `status file` | A file in `txt` format containing information on the status of each likelihood calculation job.|
+| `nan fields file` | A file in `txt` format containing the field numbers that have 0.0 field probability, leading to the blowing up of integral and no results in likelihood file.|
