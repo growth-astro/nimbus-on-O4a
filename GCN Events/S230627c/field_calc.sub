@@ -1,0 +1,16 @@
+universe = vanilla
+executable = /home/vaidehi.gupta/nimbus-astro/nimbus/scripts/singlefield_calc.py
+arguments = "--field $(field) --t_start 2023-06-27T01:53:37.819 --t_end 2023-06-30T01:53:37.819 --data_file 2023-06-27_v5.csv --output_str likelihood_ --sample_file prior_samples.txt --survey_file ZTF_fields.pkl --skymap_file S230627c.Bilby.multiorder.fits --single_band"
+#Requirements = TARGET.cpuinfo_model=?="60"
+accounting_group = ligo.prod.o3.cbc.uber.gstlaloffline
+request_memory = 7GB
+request_cpus = 8
+request_disk = 8MB
+accounting_group_user = vaidehi.gupta
+getenv = True
+initialdir = /home/vaidehi.gupta/O4_nimbus/event_20230627
+log = /home/vaidehi.gupta/O4_nimbus/event_20230627/log/multi_field_$(field).log
+error = /home/vaidehi.gupta/O4_nimbus/event_20230627/err/multi_field_$(field).err
+output = /home/vaidehi.gupta/O4_nimbus/event_20230627/out/multi_field_$(field).out
+notification = never
+queue field from fields.txt
